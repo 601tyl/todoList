@@ -22,9 +22,9 @@ def initialize_database():
             # 可选：添加初始测试数据
             if not Todo.query.first():
                 initial_todos = [
-                    Todo(title="学习Flask", description="完成REST API教程"),
-                    Todo(title="购买杂货", completed=True),
-                    Todo(title="锻炼身体")
+                    Todo(title="完成todoList项目", description="必做任务", completed=True),
+                    Todo(title="完成csv转json项目", description="选做任务"),
+                    Todo(title="完成获取天气api项目", description="选做任务")
                 ]
                 db.session.bulk_save_objects(initial_todos)
                 db.session.commit()
